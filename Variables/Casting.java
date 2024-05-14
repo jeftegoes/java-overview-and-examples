@@ -6,7 +6,7 @@ public class Casting {
 
         System.out.printf("1: %d", myTotal).println();
 
-        // byte myNewByteValue = (myMinByteValue / 2); ERROR: incompatible types: possible lossy conversion from int to byte
+        // byte myNewByteValue = (myMinByteValue / 2); ERROR: incompatible types: possible lossy conversion from int to byte.
         byte myMinByteValue = Byte.MIN_VALUE;
 
         byte myNewByteValue = (byte) (myMinByteValue / 2);

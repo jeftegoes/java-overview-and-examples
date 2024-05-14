@@ -21,7 +21,7 @@ public class PrimitiveTypes {
         System.out.println("8: Byte Value Range (" + Byte.MIN_VALUE + " to " + Byte.MAX_VALUE + ")");
         System.out.println("9: Short Value Range (" + Short.MIN_VALUE + " to " + Short.MAX_VALUE + ")");
 
-        long myLongValue = 100L;
+        // long myLongValue = 100L;
 
         System.out.println("10: A long has a width of " + Long.SIZE);
         System.out.println("11: Long Value Range (" + Long.MIN_VALUE + " to " + Long.MAX_VALUE + ")");
@@ -43,7 +43,7 @@ public class PrimitiveTypes {
         System.out.printf("18: %f", myDoubleValue).println();
 
         float myOtherFloatValue = 5.25f;
-        float myOtherFloatValue2 = (float) 5.25;
+        // float myOtherFloatValue2 = (float) 5.25;
         System.out.printf("19: %f", myOtherFloatValue).println();
 
         myIntValue = 5 / 2;
