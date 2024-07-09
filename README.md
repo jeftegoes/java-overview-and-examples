@@ -23,6 +23,7 @@
 - [3. Statements](#3-statements)
   - [3.1. Method Overloading](#31-method-overloading)
   - [3.2. Method Signatures](#32-method-signatures)
+- [4. Maven](#4-maven)
 
 # 1. JShell
 
@@ -219,3 +220,15 @@
 - In other words, a signature is unique, not just by the method name, but in combination with the number of parameters, their types, and the order in which they are declared.
 - **A method's return type is not part of the signature.**
 - **A parameter name is also not part of the signature.**
+
+# 4. Maven
+
+- What is Maven? maven helps we do all these things:
+  - Create new projects.
+  - Manages dependencies and their versions:
+    - Spring, Spring MVC, Hibernate.
+    - Add/Modify dependencies.
+  - Build a `JAR` file.
+  - Run your application locally in Tomcat or Jetty...
+  - Run unit tests.
+  - Deploy to a test environment.
