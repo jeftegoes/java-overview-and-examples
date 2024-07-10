@@ -23,7 +23,9 @@
 - [3. Statements](#3-statements)
   - [3.1. Method Overloading](#31-method-overloading)
   - [3.2. Method Signatures](#32-method-signatures)
-- [4. Maven](#4-maven)
+- [4. Coupling](#4-coupling)
+- [5. Maven](#5-maven)
+  - [5.1. Commands](#51-commands)
 
 # 1. JShell
 
@@ -221,7 +223,23 @@
 - **A method's return type is not part of the signature.**
 - **A parameter name is also not part of the signature.**
 
-# 4. Maven
+# 4. Coupling
+
+- Coupling: How much work is involved in changing something?
+  - **Coupling** is important everywhere:
+    - An engine is tightly coupled to a Car.
+    - A wheel is loosely coupled to a Car.
+    - You can take a laptop anywhere you go.
+    - A computer, on the other hand, is a little bit more difficult to move.
+  - Coupling is even more important in building great software.
+    - Only thing constant in technology is change:
+      - Business requirements change.
+      - Frameworks change.
+      - Code changes.
+    - We want Loose Coupling as much as possible.
+    - We want to make functional changes with as less code changes as possible.
+
+# 5. Maven
 
 - What is Maven? maven helps we do all these things:
   - Create new projects.
@@ -232,3 +250,8 @@
   - Run your application locally in Tomcat or Jetty...
   - Run unit tests.
   - Deploy to a test environment.
+
+## 5.1. Commands
+
+- **Run from command prompt!**
+- `mvn archetype:generate -DgroupId=com.packagename -DartifactId=ClassName -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`
