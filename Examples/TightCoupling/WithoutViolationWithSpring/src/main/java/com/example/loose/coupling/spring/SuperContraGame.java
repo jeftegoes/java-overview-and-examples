@@ -1,3 +1,5 @@
+package com.example.loose.coupling.spring;
+
 public class SuperContraGame implements GamingConsole {
     public void up() {
         System.out.println("Up");

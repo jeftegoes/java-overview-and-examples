@@ -1,3 +1,5 @@
+package com.example.loose.coupling.spring;
+
 public interface GamingConsole {
     void up();
 
