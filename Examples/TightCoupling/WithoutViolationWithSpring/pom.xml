@@ -4,7 +4,7 @@
   <groupId>com.example.loose.coupling.spring</groupId>
   <artifactId>Main.Test</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
   <name>Main.Test</name>
   <url>http://maven.apache.org</url>
   <dependencies>
