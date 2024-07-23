@@ -24,8 +24,6 @@
   - [3.1. Method Overloading](#31-method-overloading)
   - [3.2. Method Signatures](#32-method-signatures)
 - [4. Coupling](#4-coupling)
-- [5. Maven](#5-maven)
-  - [5.1. Commands](#51-commands)
 
 # 1. JShell
 
@@ -238,20 +236,3 @@
       - Code changes.
     - We want Loose Coupling as much as possible.
     - We want to make functional changes with as less code changes as possible.
-
-# 5. Maven
-
-- What is Maven? maven helps we do all these things:
-  - Create new projects.
-  - Manages dependencies and their versions:
-    - Spring, Spring MVC, Hibernate.
-    - Add/Modify dependencies.
-  - Build a `JAR` file.
-  - Run your application locally in Tomcat or Jetty...
-  - Run unit tests.
-  - Deploy to a test environment.
-
-## 5.1. Commands
-
-- **Run from command prompt!**
-- `mvn archetype:generate -DgroupId=com.packagename -DartifactId=ClassName -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`
