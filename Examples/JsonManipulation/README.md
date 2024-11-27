@@ -1,0 +1,1 @@
+- Jackson is better because Spring MVC (Spring Web) provides built-in support for Jackson’s Serialization Views.

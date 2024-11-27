@@ -37,8 +37,9 @@
     - [5.8.1. Example of Project Coordinates](#581-example-of-project-coordinates)
     - [5.8.2. Adding Dependencies](#582-adding-dependencies)
   - [5.9. Dependency Coordinates](#59-dependency-coordinates)
-- [6. Java and Maven install](#6-java-and-maven-install)
-- [7. Maven Commands](#7-maven-commands)
+- [6. Json manipulation](#6-json-manipulation)
+- [7. Java and Maven install](#7-java-and-maven-install)
+- [8. Maven Commands](#8-maven-commands)
 
 # 1. JShell
 
@@ -394,11 +395,15 @@
   - Option 1: Visit the project page (spring.io, hibernate.org etc)
   - Option 2: Visit https://central.sonatype.com (easiest approach)
 
-# 6. Java and Maven install
+# 6. Json manipulation
+
+[Json manipulation](/Examples/JsonManipulation/README.md)
+
+# 7. Java and Maven install
 
 https://medium.com/beelabacademy/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26
 
-# 7. Maven Commands
+# 8. Maven Commands
 
 - **Run from command prompt!**
 - Create new Maven project
