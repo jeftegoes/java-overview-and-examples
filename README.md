@@ -39,7 +39,9 @@
   - [5.9. Dependency Coordinates](#59-dependency-coordinates)
 - [6. Json manipulation](#6-json-manipulation)
 - [7. Java and Maven install](#7-java-and-maven-install)
-- [8. Maven Commands](#8-maven-commands)
+- [8. Maven](#8-maven)
+  - [8.1. Commands](#81-commands)
+  - [8.2. Erros](#82-erros)
 
 # 1. JShell
 
@@ -403,10 +405,41 @@
 
 https://medium.com/beelabacademy/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26
 
-# 8. Maven Commands
+# 8. Maven
+
+## 8.1. Commands
 
 - **Run from command prompt!**
 - Create new Maven project
   - `mvn archetype:generate -DgroupId=com.example -DartifactId=ClassName -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`
 - Test...
   - `mvn clean install -U`
+
+## 8.2. Erros
+
+- Problem:
+  ```
+    [WARNING] source value 8 is obsolete and will be removed in a future release
+    [WARNING] target value 8 is obsolete and will be removed in a future release
+  ```
+- Solution 1
+  - Project Structure > Project Settings > Project > set `SDK` and `Language Level` fields.
+  - Project Structure > Project Settings > Modules > set Language Level field.
+  - (Optional) Settings > Build, Execution, Deployment > Compiler > Java Compiler > `Set Per-module bytecode version` field.
+- Solution 2
+  - Edit `pom.xml`
+  ```xml
+    <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+  ```
+- Solution 3
+  - Edit `pom.xml`
+  ```xml
+    <properties>
+      <java.version>23</java.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+  ```
