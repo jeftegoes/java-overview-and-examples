@@ -1,1 +1,1 @@
-- Jackson is better because Spring MVC (Spring Web) provides built-in support for Jackson’s Serialization Views.
+- Jackson is better because Spring MVC (Spring Web = spring-boot-starter-web) provides built-in support for Jackson’s Serialization Views.

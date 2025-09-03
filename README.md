@@ -1,4 +1,4 @@
-# Java overview and examples <!-- omit in toc -->
+# Java Overview and Examples <!-- omit in toc -->
 
 ## Contents <!-- omit in toc -->
 
