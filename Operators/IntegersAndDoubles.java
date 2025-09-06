@@ -22,5 +22,14 @@ public class IntegersAndDoubles {
 
         BigDecimal truncated = new BigDecimal("10.9876");
         System.out.println(truncated.setScale(2, RoundingMode.DOWN));
+
+        double d = 3.1d;
+        double d2 = 1.21d;
+
+        System.out.printf("20: %f%n", d - d2);
+
+        BigDecimal bd3 = BigDecimal.valueOf(3.1).setScale(2);
+        BigDecimal bd4 = BigDecimal.valueOf(1.21).setScale(2);
+        System.out.println(bd3.subtract(bd4));
     }
 }
