@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArraysDemo {
+public class Main {
     public static void main(String[] args) {
         int[] arr;
         int arr2[];
