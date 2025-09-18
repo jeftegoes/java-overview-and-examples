@@ -1,4 +1,4 @@
-public class Program {
+public class Main {
     public static void main(String[] args) {
         int newScore = calculateScore("Brenno", 500);
         System.out.println("New score is: " + newScore);

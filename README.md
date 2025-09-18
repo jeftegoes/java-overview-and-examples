@@ -23,31 +23,32 @@
 - [3. Statements](#3-statements)
   - [3.1. Method Overloading](#31-method-overloading)
   - [3.2. Method Signatures](#32-method-signatures)
-- [4. Coupling](#4-coupling)
-- [5. Lombok](#5-lombok)
-  - [5.1. What is Project Lombok?](#51-what-is-project-lombok)
-  - [5.2. Project Lombok History](#52-project-lombok-history)
-  - [5.3. How Lombok Works](#53-how-lombok-works)
-  - [5.4. Project Lombok and IDEs](#54-project-lombok-and-ides)
-  - [5.5. Project Lombok Features](#55-project-lombok-features)
-- [6. Maven](#6-maven)
-  - [6.1. Without Maven](#61-without-maven)
-  - [6.2. Maven Solution](#62-maven-solution)
-    - [6.2.1. How Maven Works](#621-how-maven-works)
-  - [6.3. Handling JAR Dependencies](#63-handling-jar-dependencies)
-  - [6.4. Building and Running](#64-building-and-running)
-  - [6.5. Standard Directory Structure](#65-standard-directory-structure)
-  - [6.6. Advantages of Maven](#66-advantages-of-maven)
-  - [6.7. POM File - pom.xml](#67-pom-file---pomxml)
-  - [6.8. Project Coordinates](#68-project-coordinates)
-    - [6.8.1. Example of Project Coordinates](#681-example-of-project-coordinates)
-    - [6.8.2. Adding Dependencies](#682-adding-dependencies)
-  - [6.9. Dependency Coordinates](#69-dependency-coordinates)
-- [7. Json manipulation](#7-json-manipulation)
-- [8. Java and Maven install](#8-java-and-maven-install)
-- [9. Maven](#9-maven)
-  - [9.1. Commands](#91-commands)
-  - [9.2. Erros](#92-erros)
+- [4. Exceptions](#4-exceptions)
+- [5. Coupling](#5-coupling)
+- [6. Lombok](#6-lombok)
+  - [6.1. What is Project Lombok?](#61-what-is-project-lombok)
+  - [6.2. Project Lombok History](#62-project-lombok-history)
+  - [6.3. How Lombok Works](#63-how-lombok-works)
+  - [6.4. Project Lombok and IDEs](#64-project-lombok-and-ides)
+  - [6.5. Project Lombok Features](#65-project-lombok-features)
+- [7. Maven](#7-maven)
+  - [7.1. Without Maven](#71-without-maven)
+  - [7.2. Maven Solution](#72-maven-solution)
+    - [7.2.1. How Maven Works](#721-how-maven-works)
+  - [7.3. Handling JAR Dependencies](#73-handling-jar-dependencies)
+  - [7.4. Building and Running](#74-building-and-running)
+  - [7.5. Standard Directory Structure](#75-standard-directory-structure)
+  - [7.6. Advantages of Maven](#76-advantages-of-maven)
+  - [7.7. POM File - pom.xml](#77-pom-file---pomxml)
+  - [7.8. Project Coordinates](#78-project-coordinates)
+    - [7.8.1. Example of Project Coordinates](#781-example-of-project-coordinates)
+    - [7.8.2. Adding Dependencies](#782-adding-dependencies)
+  - [7.9. Dependency Coordinates](#79-dependency-coordinates)
+- [8. Json manipulation](#8-json-manipulation)
+- [9. Java and Maven install](#9-java-and-maven-install)
+- [10. Maven](#10-maven)
+  - [10.1. Commands](#101-commands)
+  - [10.2. Erros](#102-erros)
 
 # 1. JShell
 
@@ -245,7 +246,16 @@
 - **A method's return type is not part of the signature.**
 - **A parameter name is also not part of the signature.**
 
-# 4. Coupling
+# 4. Exceptions
+
+- **Checked**
+  - Checked exceptions are checked at compile time.
+  - Examples: IOException, SQLException, FileNotFoundException.
+- **Unchecked**
+  - Unchecked exceptions are checked at run time.
+  - Examples: NullPointerException, ArrayIndexOutOfBoundsException.
+
+# 5. Coupling
 
 - Coupling: How much work is involved in changing something?
   - **Coupling** is important everywhere:
@@ -261,9 +271,9 @@
     - We want Loose Coupling as much as possible.
     - We want to make functional changes with as less code changes as possible.
 
-# 5. Lombok
+# 6. Lombok
 
-## 5.1. What is Project Lombok?
+## 6.1. What is Project Lombok?
 
 - Java is often criticized for having too much ceremonial code.
 - For example, `getters` and `setters`.
@@ -272,14 +282,14 @@
   - `@Setter` - generates setters.
 - Using Project Lombok will save you time and give you cleaner code.
 
-## 5.2. Project Lombok History
+## 6.2. Project Lombok History
 
 - Started by Reinier Zwitserloot - @surial on Twitter and Roel Spilker before 2009.
 - Why "Lombok"? Java is also an island in Indonesia. Lombok is the second island east of the Island Java.
 - Lombok is also Indonesian for chilli.
 - Hence tag line - "Spicing up your Java"
 
-## 5.3. How Lombok Works
+## 6.3. How Lombok Works
 
 - Hooks in via the Annotation processor API.
   - The AST (raw source code) is passed to Lombok for code generation before java continues.
@@ -289,14 +299,14 @@
   - Make it easy to override Lombok generated code.
   - Example: custom setters.
 
-## 5.4. Project Lombok and IDEs
+## 6.4. Project Lombok and IDEs
 
 - Since compiled code is change, and source files are not, IDE's can get confused by this.
 - More of an issue for IDEs several years old.
 - Modern IDEs such as IntelliJ, Eclipse (and offshoots), Netbeans support Project Lombok.
 - Plugin Installation may be necessary.
 
-## 5.5. Project Lombok Features
+## 6.5. Project Lombok Features
 
 - `val`
   - Declares final local variable.
@@ -356,7 +366,7 @@
   - Recommended - SLF4J is a generic logging facade.
   - Spring Boot's default logger is LogBack.
 
-# 6. Maven
+# 7. Maven
 
 - **What is Maven?**
   - Maven is a Project Management tool.
@@ -367,11 +377,11 @@
 - One approach is to download the JAR files from each project web site.
 - Manually add the JAR files to your build path / classpath.
 
-## 6.1. Without Maven
+## 7.1. Without Maven
 
 ![Without Maven](/Images/ProjectWithoutMaven.png)
 
-## 6.2. Maven Solution
+## 7.2. Maven Solution
 
 - Tell Maven the projects we are working with (dependencies)
   - Spring, Hibernate etc...
@@ -379,24 +389,24 @@
   - And Maven will make those JAR files available during compile/run.
   - Think of Maven as your friendly helper / personal shopper.
 
-### 6.2.1. How Maven Works
+### 7.2.1. How Maven Works
 
 ![How Maven Works](/Images/HowMavenWorks.png)
 
-## 6.3. Handling JAR Dependencies
+## 7.3. Handling JAR Dependencies
 
 - When Maven retrieves a project dependency.
 - It will also download supporting dependencies.
 - For example: Spring depends on commons-logging...
 - Maven will handle this for us automagically.
 
-## 6.4. Building and Running
+## 7.4. Building and Running
 
 - When you build and run your app...
 - Maven will handle class / build path for us.
 - Based on config file, Maven will add JAR files accordingly.
 
-## 6.5. Standard Directory Structure
+## 7.5. Standard Directory Structure
 
 - Normally when we join a new project.
 - Each development team dreams up their own directory structure.
@@ -412,7 +422,7 @@
 - Developers can easily share projects between IDEs.
 - [Simple Maven Project](/Examples/starter-maven-project/)
 
-## 6.6. Advantages of Maven
+## 7.6. Advantages of Maven
 
 - Dependency Management.
   - Maven will find JAR files for us.
@@ -421,7 +431,7 @@
   - No more build path / classpath issues.
 - Standard directory structure.
 
-## 6.7. POM File - pom.xml
+## 7.7. POM File - pom.xml
 
 - POM file = **P**roject **O**bject **M**odel file.
 - Configuration file for your project.
@@ -430,7 +440,7 @@
 - POM File Structure:
   ![Simple POM File](/Images/SimplePOMFile.png)
 
-## 6.8. Project Coordinates
+## 7.8. Project Coordinates
 
 - [Apache Maven - Naming Conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html)
 - Project Coordinates uniquely identify a project:
@@ -446,7 +456,7 @@
   | Artifact ID | Name for this project: my-first-app |
   | Description | A specific release version like: 1.0, 1.6, 2.0, if project is under active development then: 1.0-SNAPSHOT |
 
-### 6.8.1. Example of Project Coordinates
+### 7.8.1. Example of Project Coordinates
 
 ```xml
   <groupId>com.myfirstapp</groupId>
@@ -466,7 +476,7 @@
   <version>6.1.4.Final</version>
 ```
 
-### 6.8.2. Adding Dependencies
+### 7.8.2. Adding Dependencies
 
 ```xml
   <project ...>
@@ -487,7 +497,7 @@
   </project>
 ```
 
-## 6.9. Dependency Coordinates
+## 7.9. Dependency Coordinates
 
 - To add given dependency project, we need
   - **Group ID**, **Artifact ID**
@@ -498,17 +508,17 @@
   - Option 1: Visit the project page (spring.io, hibernate.org etc)
   - Option 2: Visit https://central.sonatype.com (easiest approach)
 
-# 7. Json manipulation
+# 8. Json manipulation
 
 [Json manipulation](/Examples/JsonManipulation/README.md)
 
-# 8. Java and Maven install
+# 9. Java and Maven install
 
 https://medium.com/beelabacademy/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26
 
-# 9. Maven
+# 10. Maven
 
-## 9.1. Commands
+## 10.1. Commands
 
 - **Run from command prompt!**
 - Create new Maven project
@@ -516,7 +526,7 @@ https://medium.com/beelabacademy/configurando-vari%C3%A1veis-de-ambiente-java-ho
 - Test...
   - `mvn clean install -U`
 
-## 9.2. Erros
+## 10.2. Erros
 
 - Problem:
   ```

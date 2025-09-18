@@ -1,4 +1,4 @@
-public class Program {
+public class Main {
     public static boolean hasEqualSum(int firstNum, int secondNum, int equalSumNum) {
         if ((firstNum + secondNum) != equalSumNum) {
             return false;
