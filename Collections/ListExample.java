@@ -63,5 +63,17 @@ public class ListExample {
         for (Pet pet : list4) {
             System.out.println(pet.getName());
         }
+
+        List<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("mango");
+        list.add("apple");
+        list.add("orange");
+        System.out.println("list.remove(): " + list.remove("Apple"));
+
+        List<Double> doubleList = new ArrayList<>();
+        // System.out.println(doubleList.get(doubleList.size())); // Runtime error.
+        // doubleList.add(1); // Compilation Error.
+        // System.out.println(list.indexOf(1.0)); // Runtime error.
     }
 }
