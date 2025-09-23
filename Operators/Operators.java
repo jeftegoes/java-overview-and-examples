@@ -1,4 +1,4 @@
-public class Main {
+public class Operators {
     public static void main(String[] args) {
         // Arithmetic Operators
         // Unary Arithmetic Operators
@@ -136,5 +136,14 @@ public class Main {
         System.out.println(2 > 1 ? "2 is greater than one" : "2 is not less than one.");
         System.out.println(2 < 1 ? "2 is greater than one" : "2 is not less than one.");
 
+        int x2 = 5, y2 = 5;
+        System.out.print(y2 + x2++);
+        System.out.println(" " + (x2 + ++y2));
+
+        // instanceof
+        Object testString2 = "test string";
+        if (testString2 instanceof String str) {
+            System.out.println("Is a String: " + str);
+        }
     }
 }

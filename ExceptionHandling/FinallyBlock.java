@@ -14,9 +14,29 @@ public class FinallyBlock {
             System.out.println("Error message: " + e.getMessage());
             e.printStackTrace();
         } finally {
-//            System.exit(0);
-//            throw new RuntimeException();
+            // System.exit(0);
+            // throw new RuntimeException();
             System.out.println("Finally block will be executed with and without exception.");
         }
+
+        // Correct handling of exceptions.
+        try {
+
+        } finally {
+
+        }
+
+        try {
+
+        } catch (ArrayIndexOutOfBoundsException | ArithmeticException e) {
+
+        }
+
+        // ArithmeticException extends Exception and hence is not allowed as exceptions defined in the same inheritance hierarchy are not allowed in the same multi-catch block.
+        // try {
+        //
+        // } catch (Exception e | ArithmeticException e ) {
+        //
+        // }
     }
 }

@@ -11,5 +11,10 @@ public class StringFormatting {
         System.out.println(formattedString);
 
         System.out.printf("You have %d books available at store.\n", 10);
+
+        String str = "String";
+        str.concat(" is");
+        str.concat(" immutable");
+        System.out.println(str);
     }
 }
