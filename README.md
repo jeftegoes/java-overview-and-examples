@@ -44,11 +44,13 @@
     - [7.8.1. Example of Project Coordinates](#781-example-of-project-coordinates)
     - [7.8.2. Adding Dependencies](#782-adding-dependencies)
   - [7.9. Dependency Coordinates](#79-dependency-coordinates)
+  - [7.10. Generate Manifest File with Maven](#710-generate-manifest-file-with-maven)
 - [8. Json manipulation](#8-json-manipulation)
 - [9. Java and Maven install](#9-java-and-maven-install)
 - [10. Maven](#10-maven)
   - [10.1. Commands](#101-commands)
   - [10.2. Erros](#102-erros)
+- [11. Java Commands](#11-java-commands)
 
 # 1. JShell
 
@@ -508,6 +510,28 @@
   - Option 1: Visit the project page (spring.io, hibernate.org etc)
   - Option 2: Visit https://central.sonatype.com (easiest approach)
 
+## 7.10. Generate Manifest File with Maven
+
+```xml
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <version>3.5.0</version>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <addClasspath>true</addClasspath>
+                          <mainClass>org.example.Main</mainClass>
+                      </manifest>
+                  </archive>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+```
+
 # 8. Json manipulation
 
 [Json manipulation](/Examples/JsonManipulation/README.md)
@@ -554,3 +578,10 @@ https://medium.com/beelabacademy/configurando-vari%C3%A1veis-de-ambiente-java-ho
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
   ```
+
+# 11. Java Commands
+
+- **With manifest**
+  - java -jar `<java-project>.jar`
+- **Without manifest**
+  - java -cp `<java-project>.jar` org.example.Main

@@ -1,0 +1,14 @@
+services:
+  app:
+    image: java_docker_starter_container:latest
+    container_name: java_docker_starter_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5005:5005"
+    networks:
+      - windows_net
+networks:
+  windows_net:
+    driver: bridge
